@@ -1,0 +1,18 @@
+baseURL: https://ianshih.netlify.app/
+languageCode: zh-tw
+title: 大亨的部落格
+theme: github.com/CaiJimmy/hugo-theme-stack/v3
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.120.0"
+
+params:
+    main:
+        author:
+            name: "大亨"
+            headline: "YouTube 影片庫存與技術筆記"
+    sidebar:
+        emoji: ☕️
+        subtitle: "歡迎來到我的部落格"
