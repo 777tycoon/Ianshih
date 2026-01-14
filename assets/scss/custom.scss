@@ -1,3 +1,28 @@
-/*
-    You can add your own custom styles here.
-*/
+/* 自定義縮放樣式 */
+
+:root {
+    /* 1. 縮小全局文字與間距 (原本是 62.5%) */
+    /* 降到 50% 會讓原本 1.6rem 的字從 16px 變成 12.8px */
+    font-size: 50% !important; 
+
+    /* 2. 調整文章內部的字體大小 (原本是 1.6rem ~ 1.7rem) */
+    --article-font-size: 1.5rem;
+}
+
+/* 3. 縮小整體容器寬度，讓版面看起來更緊湊 */
+@media (min-width: 1024px) {
+    .container.extended {
+        max-width: 1024px !important; /* 原本可能是 1280px */
+    }
+}
+
+@media (min-width: 1280px) {
+    .container.extended {
+        max-width: 1100px !important; /* 原本可能是 1536px */
+    }
+}
+
+/* 4. 縮小卡片間的間距 (原本是 40px) */
+:root {
+    --section-separation: 30px;
+}
