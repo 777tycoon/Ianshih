@@ -1,0 +1,12 @@
+[build]
+  publish = "public"
+  command = "hugo --gc --minify"
+
+[build.environment]
+  HUGO_VERSION = "0.134.0"
+  HUGO_EXTENDED = "true"
+  GO_VERSION = "1.22"
+  TZ = "Asia/Taipei"
+
+[context.production.environment]
+  HUGO_ENV = "production"
