@@ -61,8 +61,6 @@ weight: 1
 
 1. **加入變動**：
     
-    codeBash
-    
     ```
     git add .
     ```
