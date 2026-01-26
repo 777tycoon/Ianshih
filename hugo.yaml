@@ -1,6 +1,6 @@
-baseURL: https://ianshih.netlify.app/
+baseURL: https://digivineyard.com/
 languageCode: zh-tw
-title: 大亨的部落格
+title: 數位葡萄園
 theme: github.com/CaiJimmy/hugo-theme-stack/v3
 
 module:
