@@ -3,7 +3,7 @@ title: Hugo 重安裝心得
 description: 在電腦上打開文章
 slug: hugo-reinstall-feeling
 date: 2026-01-14 16:03:54+08:00
-image: cover.jpg
+image:
 categories:
   - Example Category
 tags:
