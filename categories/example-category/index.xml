@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Example Category on Digital Vineyard</title><link>https://digivineyard.com/categories/example-category/</link><description>Recent content in Example Category on Digital Vineyard</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 14 Jan 2026 16:03:54 +0800</lastBuildDate><atom:link href="https://digivineyard.com/categories/example-category/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Post</title><link>https://digivineyard.com/p/how-post/</link><pubDate>Wed, 14 Jan 2026 16:03:54 +0800</pubDate><guid>https://digivineyard.com/p/how-post/</guid><description>&lt;p&gt;要修改頁面，可以照著以下步驟操作：&lt;/p&gt;
+&lt;h3 id="第一步在電腦上找到該檔案以hello-world"&gt;第一步：在電腦上找到該檔案(以 &lt;strong&gt;hello-world&lt;/strong&gt;)
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;打開你的 &lt;strong&gt;VS Code&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在左側的檔案瀏覽器中，展開資料夾路徑：&lt;br&gt;
+&lt;strong&gt;content&lt;/strong&gt; &amp;gt; &lt;strong&gt;post&lt;/strong&gt; &amp;gt; &lt;strong&gt;hello-world&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;點擊打開裡面的 &lt;strong&gt;index.md&lt;/strong&gt; 檔案。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;註：Hugo Stack 主題使用的是「Page Bundle」模式，所以每篇文章都有自己的資料夾，內容都在 index.md 裡。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id="第二步修改內容"&gt;第二步：修改內容
+&lt;/h3&gt;&lt;p&gt;打開檔案後，你會看到兩部分：&lt;/p&gt;
+&lt;h4 id="1-上半部標頭資訊-front-matter"&gt;1. 上半部：標頭資訊 (Front Matter)
+&lt;/h4&gt;&lt;p&gt;這是被 &amp;mdash; 包起來的部分，決定了網頁的元數據。你可以修改：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;title&lt;/strong&gt;: 網頁標題。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;: 顯示在列表中的簡介。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;date&lt;/strong&gt;: 發布日期。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;image&lt;/strong&gt;: 封面圖（可以貼上 YouTube 的縮圖網址）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;categories &amp;amp; tags&lt;/strong&gt;: 分類與標籤。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="2-下半部文章本文"&gt;2. 下半部：文章本文
+&lt;/h4&gt;&lt;p&gt;在第二個 &amp;mdash; 之後的所有內容，就是你在網頁上看到的文字。你可以直接用 &lt;strong&gt;Markdown&lt;/strong&gt; 語法開始寫作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;## 代表二級標題。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;文字&lt;/strong&gt; 代表粗體。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;直接貼上文字就是段落。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="第三步存檔與上傳"&gt;第三步：存檔與上傳
+&lt;/h3&gt;&lt;p&gt;修改完畢後，請在 VS Code 的終端機（Terminal）輸入你已經學會的指令，讓網頁更新：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;加入變動&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git add .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;存檔備註&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;codeBash&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git commit -m &amp;#34;修正首篇文章內容&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;推送到雲端&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;codeBash&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git push origin master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id="-實戰小技巧"&gt;💡 實戰小技巧
+&lt;/h3&gt;&lt;h4 id="1-如何即時看到修改結果"&gt;1. 如何即時看到修改結果？
+&lt;/h4&gt;&lt;p&gt;在推送到 GitHub 之前，你可以先在 VS Code 終端機輸入：&lt;/p&gt;
+&lt;p&gt;codeBash&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;hugo server
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;然後打開瀏覽器看 http://localhost:1313/p/hello-world/。你一邊改、一邊存檔，瀏覽器的畫面會立刻跳轉更新，確認沒問題後再 git push。&lt;/p&gt;
+&lt;h4 id="2-如何更換封面圖"&gt;2. 如何更換封面圖？
+&lt;/h4&gt;&lt;p&gt;如果你想讓這篇文章顯示你的 YouTube 影片封面，請修改 image 欄位：&lt;/p&gt;
+&lt;p&gt;codeYaml&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;image: &amp;#34;https://img.youtube.com/vi/你的影片ID/maxresdefault.jpg&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;這樣首頁的卡片就會變得非常漂亮！&lt;/p&gt;
+&lt;h4 id="3-如何刪除或新增文章"&gt;3. 如何刪除或新增文章？
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;刪除&lt;/strong&gt;：直接在 content/post/ 刪除該資料夾，然後 git push。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;新增&lt;/strong&gt;：在 content/post/ 下新建一個資料夾（例如 my-video-1），在裡面建立 index.md，並填入標頭資訊即可。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Hugo 重安裝心得</title><link>https://digivineyard.com/p/hugo-reinstall-feeling/</link><pubDate>Wed, 14 Jan 2026 16:03:54 +0800</pubDate><guid>https://digivineyard.com/p/hugo-reinstall-feeling/</guid><description>&lt;h3 id="主題選擇從-hextra-到簡單路線"&gt;主題選擇：從 Hextra 到簡單路線
+&lt;/h3&gt;&lt;p&gt;原本很想用 Hextra 這個主題，作者更新超勤快，功能也很強大。但最近一次拉更新後，設定檔結構變了不少，我反而看不懂怎麼改了（可能是我太久沒碰）。 最後還是決定回歸簡單路線——畢竟我做這個 Blog 的初衷，只是想有一個地方紀錄自己的思考，不需要太複雜的花俏功能。找個容易上手的主題，專心寫內容就好。&lt;/p&gt;
+&lt;h3 id="部署過程netlify-與-cloudflare-的來回"&gt;部署過程：Netlify 與 Cloudflare 的來回
+&lt;/h3&gt;&lt;p&gt;第一次部署選了 Netlify，因為很多教學文都是用它。過程遇到不少坑（權限、build 設定、branch 連動等），還好有 AI 幫忙一步步 debug，最終在 2026/01/14 成功上線！ 那一刻真的很有成就感，也讓我對靜態網站部署更有信心。&lt;/p&gt;
+&lt;p&gt;後來又爬了一些文，發現 Cloudflare Pages 其實更適合我的使用情境（免費額度大、速度快、整合 Git 超方便）。&lt;/p&gt;
+&lt;p&gt;我之前有 Cloudflare 架站經驗，就決定遷移過去。 雖然一開始有卡住——我錯點了「Workers」的建立按鈕，用了很久才發現。 正確做法是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;進到 Cloudflare 儀表板&lt;/li&gt;
+&lt;li&gt;不要直接點中間大藍色「Create application」按鈕&lt;/li&gt;
+&lt;li&gt;而是要點上方小小的「+」圖示 → 選擇「Pages」 → Connect to Git&lt;/li&gt;
+&lt;li&gt;綁定 GitHub 儲存庫，設定 build command 為 hugo &amp;ndash;minify，publish directory 為 public&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;照著做之後就順利部署了。Cloudflare 的介面比想像中更直覺，build 速度也很快。&lt;/p&gt;
+&lt;h3 id="心得與小提醒"&gt;心得與小提醒
+&lt;/h3&gt;&lt;p&gt;這次從頭重裝 Hugo、換主題、來回試兩個平台，雖然花了不少時間，但收穫很大。現在對靜態網站的整個流程（從本地測試、git push 到自動部署）已經更熟悉了。 如果你也想用 Hugo 建個人數位花園或思考記錄站，強烈建議從簡單主題開始，部署時多用 AI 輔助 debug，真的會省下很多時間。&lt;/p&gt;
+&lt;p&gt;未來我會繼續用這個網站記錄投資、閱讀與生活心得，但會注意內容尺度，避免寫太多私人或工作相關的細節。&lt;/p&gt;</description></item><item><title>Hello World</title><link>https://digivineyard.com/p/hello-world/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://digivineyard.com/p/hello-world/</guid><description>&lt;img src="https://digivineyard.com/p/hello-world/cover.jpg" alt="Featured image of post Hello World" /&gt;&lt;p&gt;Welcome to Ian&amp;rsquo;s blog. This is my first post.&lt;/p&gt;
+&lt;p&gt;For more information about this theme, check the documentation: &lt;a class="link" href="https://stack.jimmycai.com/" target="_blank" rel="noopener"
+&gt;https://stack.jimmycai.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Want a site like this? Check out &lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack-starter" target="_blank" rel="noopener"
+&gt;hugo-theme-stack-stater&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Photo by &lt;a class="link" href="https://unsplash.com/@pawel_czerwinski" target="_blank" rel="noopener"
+&gt;Pawel Czerwinski&lt;/a&gt; on &lt;a class="link" href="https://unsplash.com/" target="_blank" rel="noopener"
+&gt;Unsplash&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description></item></channel></rss>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Obsidian on Digital Vineyard</title><link>https://digivineyard.com/categories/obsidian/</link><description>Recent content in Obsidian on Digital Vineyard</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 11 Feb 2026 14:33:30 +0800</lastBuildDate><atom:link href="https://digivineyard.com/categories/obsidian/index.xml" rel="self" type="application/rss+xml"/><item><title>Obsidian：你的第二大腦，打造個人知識管理系統</title><link>https://digivineyard.com/p/obsidian-your-second-brain/</link><pubDate>Wed, 11 Feb 2026 14:33:30 +0800</pubDate><guid>https://digivineyard.com/p/obsidian-your-second-brain/</guid><description>&lt;h2 id="曾踩過的坑"&gt;曾踩過的坑
+&lt;/h2&gt;&lt;p&gt;我曾經用過 Evernote、Notion、Roam Research、Logseq&amp;hellip;還有許多 App，族繁不及備載。這些工具各有優缺，但總是在某些方面讓我感到受限：資料隱私的擔憂、訂閱制的壓力、跨裝置的同步問題都讓我無法真正建立起個人化的知識庫。直到用了 Obsidian，才讓我真正找到了能安心且高效管理知識的工具。&lt;/p&gt;
+&lt;h2 id="obsidian-是什麼"&gt;Obsidian 是什麼？
+&lt;/h2&gt;&lt;p&gt;Obsidian 是一款以 Markdown 文字檔為主的筆記 (Note taking) 軟體。它將你的筆記儲存在本地，並透過強大的雙向連結功能，幫助你建立起一個相互關聯的知識網絡，就像你的第二大腦 ([[Second Brain]])。&lt;/p&gt;
+&lt;h2 id="obsidian-的吸引人觀點與優點"&gt;Obsidian 的吸引人觀點與優點
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;隱私至上，資料完全掌控：&lt;/strong&gt; 你的筆記儲存在本地，不需上傳雲端，徹底解決資料隱私的疑慮。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;本地化儲存，速度飛快：&lt;/strong&gt; 無論是否有網路，你的筆記都能秒開秒存，享受流暢的寫作體驗，同步的機制也很單純。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Markdown 語法，簡潔高效：&lt;/strong&gt; 學習成本低，讓你專注於內容本身，而非排版。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;雙向連結，建立知識網絡：&lt;/strong&gt; 透過不同筆記之間的雙向連結，幫助整理思緒啟發新的連結與洞見。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;插件 (Plug-in) 生態系豐富：&lt;/strong&gt; 雖然主程式非開源軟體，但開放許多開源的插件，因為龐大的使用者社群提供豐富的資源、教學與支援，所以讓 Obsidian 的功能得以無限擴展，滿足各種客製化需求。從任務管理、日曆整合到學術引用，應有盡有。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;免費使用，無痛入門：&lt;/strong&gt; 基本功能完全免費，讓你零成本體驗強大的知識管理工具。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="未來要說的事"&gt;未來要說的事。
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;如何開始使用 Obsidian：&lt;/strong&gt; 安裝、建立第一個筆記、基本操作。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Obsidian 的核心功能：&lt;/strong&gt; 雙向連結、[[Excalidraw]]、標籤、嵌入。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;推薦的必備插件：&lt;/strong&gt; 介紹幾個實用且能大幅提升效率的插件。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;如何利用 Obsidian 建立個人知識管理系統 (PKM)：&lt;/strong&gt; [[Zettelkasten]] 方法、PARA 方法、[[GTD]] 等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Obsidian 在不同領域的應用：&lt;/strong&gt; 學生、研究人員、作家、開發者等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="-熟成反思-conclusion"&gt;🍷 熟成反思 (Conclusion)
+&lt;/h2&gt;&lt;p&gt;Obsidian 不僅僅是一個筆記軟體，它更是一個強大的知識管理工具，能幫助你整理思緒、連結知識、激發創意。它賦予你完全的掌控權，讓你的數位大腦真正為你所用。如果你正在尋找一個能伴隨你成長、不斷進化的筆記工具，Obsidian 絕對值得你一試。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;版權聲明：&lt;/strong&gt; 本文原載於 &lt;a class="link" href="https://digivineyard.com" target="_blank" rel="noopener"
+&gt;Digital Vineyard&lt;/a&gt;，轉載請註明出處。&lt;/p&gt;
+&lt;/blockquote&gt;</description></item></channel></rss>
