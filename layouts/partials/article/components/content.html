@@ -1,0 +1,12 @@
+<section class="article-content">
+    {{ $content := .Content }}
+    
+    {{/* 1. 處理帶有別名的連結 [[檔案名稱|顯示文字]] */}}
+    {{ $content = $content | replaceRE `\[\[([^\]|]+)\|([^\]]+)\]\]` "<a href=\"/p/$1\" class=\"internal-link\">$2</a>" }}
+    
+    {{/* 2. 處理一般連結 [[檔案名稱]] */}}
+    {{ $content = $content | replaceRE `\[\[([^\]|]+)\]\]` "<a href=\"/p/$1\" class=\"internal-link\">$1</a>" }}
+    
+    {{/* 輸出處理後的內容 */}}
+    {{ $content | safeHTML }}
+</section>
