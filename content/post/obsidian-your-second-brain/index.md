@@ -3,12 +3,13 @@ title: Obsidian：你的第二大腦，打造個人知識管理系統
 description: 厭倦了筆記軟體的限制？Obsidian 讓你掌控知識，建立專屬的數位大腦，享受前所未有的筆記體驗。
 slug: obsidian-your-second-brain
 date: 2026-02-11 14:33:30+08:00
-image:
+image: cover.webp
 categories:
   - Obsidian
 tags:
   - Example Tag
 weight: 1
+source: https://digivineyard.com/p/obsidian-your-second-brain/
 ---
 ## 曾踩過的坑
 
