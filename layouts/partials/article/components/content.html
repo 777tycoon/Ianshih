@@ -1,3 +1,20 @@
+<style>
+    /* 設定 Obsidian 內部連結的顏色與底線 */
+    .article-content a.internal-link {
+        color: #2483ff; /* 你喜歡的藍色 */
+        text-decoration: none;
+        border-bottom: 1px dashed #2483ff; /* 虛線底線，更有筆記感 */
+        transition: all 0.3s;
+    }
+
+    /* 滑鼠移上去時的變化 */
+    .article-content a.internal-link:hover {
+        color: #0056b3;
+        border-bottom: 1px solid #0056b3;
+        background-color: rgba(36, 131, 255, 0.1); /* 淡淡的背景色 */
+    }
+</style>
+
 <section class="article-content">
     {{ $content := .Content }}
     
