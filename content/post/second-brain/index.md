@@ -1,10 +1,11 @@
 ---
 title: 打造第二大腦：Tiago Forte 的數位生產力系統 (Building a Second Brain)
 description: 探討如何透過 CODE 與 PARA 框架，將碎片化資訊轉化為具價值的數位資產。
-slug: building-a-second-brain-tiago-forte
+slug: second-brain
 date: 2026-03-06 09:30:00+0800
 image:
 categories:
+  - Obsidian
 tags:
 weight: 1
 ---
