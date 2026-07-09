@@ -1,0 +1,7 @@
+{{ $a := .Get 0 }}
+{{ $b := .Get 1 }}
+{{ if $b }}
+<script src="https://gist.github.com/{{ $a }}/{{ $b }}.js"></script>
+{{ else }}
+<script src="https://gist.github.com/{{ $a }}.js"></script>
+{{ end }}
