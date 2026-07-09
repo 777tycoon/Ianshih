@@ -11,8 +11,23 @@ defaultContentLanguage = "en"
 # This will make .Summary and .WordCount behave correctly for CJK languages.
 hasCJKLanguage = false
 
+# Set hasCJKLanguage = true if your defaultContentLanguage is a CJK language
+# (e.g., "zh-tw" or "zh-cn" or "ja" or "ko")
+# hasCJKLanguage = true
+
 # Change it to your Disqus shortname before using
 disqusShortname = "hugo-theme-stack"
 
 [pagination]
 pagerSize = 5
+
+# Sitemap & robots
+enableRobotsTXT = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
