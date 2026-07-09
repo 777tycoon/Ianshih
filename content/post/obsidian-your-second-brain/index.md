@@ -10,7 +10,7 @@ tags:
 weight: 1
 source: https://digivineyard.com/p/obsidian-your-second-brain/
 ---
-## 曾踩過的坑
+## 曾踩過的坑 
 
 我曾經用過 Evernote、Notion、Roam Research、Logseq...還有許多 App，族繁不及備載。這些工具各有優缺，但總是在某些方面讓我感到受限：資料隱私的擔憂、訂閱制的壓力、跨裝置的同步問題都讓我無法真正建立起個人化的知識庫。直到用了 Obsidian，才讓我真正找到了能安心且高效管理知識的工具。
 

@@ -9,12 +9,13 @@ categories:
   - Hugo
 tags:
 weight: 1
+source: https://digivineyard.com/p/obsidian-hugo-wikilinks-fix-guide/
 ---
 
 
 ## 建置 Hugo 網站後難關才剛開始
 
-眾所周知 Obsidian 是絕佳的思考與寫作空間，而 Hugo 則是將這些文章轉為公開「數位花園」的首選工具。然而，當我試圖將兩者結合時，遇到的第一個大挑戰就是語法的不相容，特別是 Obsidian 最強的功能內部連結 (internal links) ， APP 裡 Markdown 語法是這樣寫的 ```[ [ 文字 ] ] ```
+眾所周知 Obsidian 是絕佳的思考與寫作空間，而 Hugo 則是將這些文章轉為公開「數位花園」的首選工具。然而，當我試圖將兩者結合時，遇到的第一個大挑戰就是語法的不相容，特別是 Obsidian 最強的功能:內部連結 (internal links) ， APP 裡 Markdown 語法是這樣寫的 ```[ [ 文字 ] ] ```
 
 但在標準 Markdown 語法中，Obsidian 的 `[ [ 文字 ] ]`  語法在並不被承認，導致 Hugo 渲染出的網頁只會顯示一串無意義的括號或只能點擊但無反應的底線字。
 
