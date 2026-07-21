@@ -16,7 +16,7 @@ source: https://digivineyard.com/p/obsidian-your-second-brain/
 
 ## Obsidian 是什麼？
 
-Obsidian 是一款以 Markdown 文字檔為主的筆記 (Note taking) 軟體。它將你的筆記儲存在本地，並透過強大的雙向連結功能，幫助你建立起一個相互關聯的知識網絡，就像你的第二大腦 ([[second-brain|Second Brain]] %%[index](DigiVineyard/content/post/second-brain/index.md)%%)。
+Obsidian 是一款以 Markdown 文字檔為主的筆記 (Note taking) 軟體。它將你的筆記儲存在本地，並透過強大的雙向連結功能，幫助你建立起一個相互關聯的知識網絡，就像你的第二大腦 ([[second-brain|Second Brain]])。
 
 ## Obsidian 的吸引人觀點與優點
 
