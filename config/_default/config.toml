@@ -9,7 +9,7 @@ defaultContentLanguage = "en"
 
 # Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
 # This will make .Summary and .WordCount behave correctly for CJK languages.
-hasCJKLanguage = false
+hasCJKLanguage = true
 
 # Set hasCJKLanguage = true if your defaultContentLanguage is a CJK language
 # (e.g., "zh-tw" or "zh-cn" or "ja" or "ko")
@@ -25,7 +25,14 @@ pagerSize = 5
 enableRobotsTXT = true
 
 [outputs]
-  home = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "llms"]
+
+# llms.txt：給 AI 的網站導覽圖（由 layouts/index.llms.txt 自動產生）
+[outputFormats.llms]
+  mediaType = "text/plain"
+  baseName = "llms"
+  isPlainText = true
+  notAlternative = true
 
 [sitemap]
   changefreq = "weekly"

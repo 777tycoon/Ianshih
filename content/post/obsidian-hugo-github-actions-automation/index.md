@@ -4,7 +4,7 @@ description: 解決手動部署 Hugo 的瑣碎步驟。本文手把手教你如�
 slug: obsidian-hugo-github-actions-automation
 date: 2026-07-09 09:10:00+0800
 image:
-draft: true
+draft: false
 categories:
   - Obsidian
   - Hugo
@@ -102,7 +102,10 @@ jobs:
 * **私密筆記與公開網頁分離（Private vs. Public Vault）**：如果讀者的 Obsidian 是私有庫，如何利用 Action 只把 `content/` 資料夾中特定的公開文章推送到 Hugo 的公開庫中，兼顧隱私與分享。
 
 ### 結語
->待補充
+
+在解決了 WikiLinks 的 404 失效問題後，這一套一鍵發布的工作流終於迎來了完美的閉環。這不僅僅是技術上的打通，更是寫作心流的解放。當你不再需要被 `git push`、`hugo` 等繁瑣指令打斷思緒，寫作就能回歸到最純粹的思考與紀錄。
+
+如果你也想在 Obsidian 中打造一個免除雜工、高流暢度的數位花園，希望這篇 GitHub Actions 的配置指南與後續的 WikiLinks 修復方案能為你提供一些靈感與參考。
 
 
 **[風險提示 Risk Warning：自動化部署涉及 GitHub 個人存取權杖（Personal Access Token）與憑證設定，若權限開得過大或外洩，可能導致私有儲存庫（Private Repository）外流。請務必遵循最低權限原則（Principle of Least Privilege）進行設定。]**

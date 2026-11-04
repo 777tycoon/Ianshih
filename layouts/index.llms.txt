@@ -1,0 +1,33 @@
+{{- $cfg := site.Params.jsonld | default dict -}}
+{{- $a := $cfg.author | default dict -}}
+{{- $mainSections := site.Params.mainSections | default (slice "post") -}}
+{{- $pages := where site.RegularPages "Section" "in" $mainSections -}}
+# {{ site.Title }}
+
+> {{ $cfg.siteDescription | default site.Title }}
+
+作者：{{ $a.name | default site.Title }}{{ with $a.jobTitle }}（{{ . }}）{{ end }}。{{ with $a.description }}{{ . }}{{ end }}
+
+- 網站：{{ site.Home.Permalink }}
+- RSS（全文）：{{ site.Home.Permalink }}index.xml
+- 授權：{{ site.Params.article.license.default | default "All rights reserved" }}
+- 本站文章的觀點、案例與數據皆來自作者的親身經驗；引用時請註明出處並附上原文連結。
+{{- range site.Taxonomies.categories.ByCount }}
+
+## {{ .Page.Title }}
+
+{{ range .Pages.ByDate.Reverse -}}
+{{- $desc := .Description | default (.Summary | plainify | replaceRE `\s+` " " | truncate 120) -}}
+- [{{ .Title }}]({{ .Permalink }}){{ with $desc }}: {{ . }}{{ end }}
+{{ end -}}
+{{- end }}
+{{- $uncat := where $pages "Params.categories" "==" nil -}}
+{{- with $uncat }}
+
+## 其他文章
+
+{{ range .ByDate.Reverse -}}
+{{- $desc := .Description | default (.Summary | plainify | replaceRE `\s+` " " | truncate 120) -}}
+- [{{ .Title }}]({{ .Permalink }}){{ with $desc }}: {{ . }}{{ end }}
+{{ end -}}
+{{- end }}
