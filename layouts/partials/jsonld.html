@@ -1,0 +1,74 @@
+{{- /*
+  JSON-LD 結構化資料（給搜尋引擎與 AI 看的「名片」）
+  - 首頁：WebSite + Person（作者）
+  - 文章頁（mainSections 底下的單篇）：BlogPosting
+  作者資訊設定於 config/_default/params.toml 的 [jsonld] 區塊
+*/ -}}
+{{- $cfg := site.Params.jsonld | default dict -}}
+{{- $a := $cfg.author | default dict -}}
+{{- $mainSections := site.Params.mainSections | default (slice "post") -}}
+
+{{- /* ---------- 作者 Person ---------- */ -}}
+{{- $author := dict "@type" "Person" "@id" (printf "%s#author" site.Home.Permalink) "name" ($a.name | default site.Title) "url" site.Home.Permalink -}}
+{{- with $a.alternateName }}{{ $author = merge $author (dict "alternateName" .) }}{{ end -}}
+{{- with $a.jobTitle }}{{ $author = merge $author (dict "jobTitle" .) }}{{ end -}}
+{{- with $a.description }}{{ $author = merge $author (dict "description" .) }}{{ end -}}
+{{- with $a.knowsAbout }}{{ $author = merge $author (dict "knowsAbout" .) }}{{ end -}}
+{{- with $a.sameAs }}{{ $author = merge $author (dict "sameAs" .) }}{{ end -}}
+{{- with site.Params.sidebar.avatar.src -}}
+  {{- with resources.Get . -}}
+    {{- $author = merge $author (dict "image" .Permalink) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $data := dict -}}
+
+{{- if .IsHome -}}
+  {{- /* ---------- 首頁：WebSite ---------- */ -}}
+  {{- $website := dict
+      "@type" "WebSite"
+      "@id" (printf "%s#website" site.Home.Permalink)
+      "name" site.Title
+      "url" site.Home.Permalink
+      "inLanguage" site.LanguageCode
+      "author" (dict "@id" (printf "%s#author" site.Home.Permalink))
+  -}}
+  {{- with $cfg.siteDescription }}{{ $website = merge $website (dict "description" .) }}{{ end -}}
+  {{- $data = dict "@context" "https://schema.org" "@graph" (slice $website $author) -}}
+
+{{- else if and .IsPage (in $mainSections .Section) -}}
+  {{- /* ---------- 文章頁：BlogPosting ---------- */ -}}
+  {{- $desc := .Description | default (.Summary | plainify | replaceRE `\s+` " " | truncate 160) -}}
+  {{- $post := dict
+      "@context" "https://schema.org"
+      "@type" "BlogPosting"
+      "headline" .Title
+      "url" .Permalink
+      "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+      "datePublished" (.Date.Format "2006-01-02T15:04:05-07:00")
+      "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00")
+      "inLanguage" site.LanguageCode
+      "description" $desc
+      "wordCount" .WordCount
+      "author" $author
+      "publisher" $author
+      "isPartOf" (dict "@type" "WebSite" "name" site.Title "url" site.Home.Permalink)
+  -}}
+  {{- with .Params.tags }}{{ $post = merge $post (dict "keywords" (delimit . ", ")) }}{{ end -}}
+  {{- with .Params.categories }}{{ $post = merge $post (dict "articleSection" (index . 0)) }}{{ end -}}
+  {{- with .Params.image -}}
+    {{- if hasPrefix . "http" -}}
+      {{- $post = merge $post (dict "image" .) -}}
+    {{- else -}}
+      {{- with $.Resources.GetMatch . -}}
+        {{- $post = merge $post (dict "image" .Permalink) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with site.Params.article.license.default }}{{ $post = merge $post (dict "license" .) }}{{ end -}}
+  {{- $data = $post -}}
+{{- end -}}
+
+{{- if $data }}
+<script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
+{{- end -}}

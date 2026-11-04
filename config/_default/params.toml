@@ -148,3 +148,17 @@ clientSecret = ""
 [comments.cusdis]
 host = ""
 id = ""
+
+
+## JSON-LD / llms.txt 作者與網站資訊（給搜尋引擎與 AI 看）
+[jsonld]
+siteDescription = "大亨的數位花園：航運、船舶輪機實務與 AI 工具應用筆記。"
+
+[jsonld.author]
+name = "大亨"
+alternateName = "777大亨"
+jobTitle = "資深船舶工務工程師"
+description = "具船舶管理、輪機與驗船背景，分享航運現場的第一手經驗與技術筆記。"
+knowsAbout = ["船舶輪機", "船舶管理", "航運營運", "驗船與法規合規", "AI 工具應用"]
+# 你在其他平台的個人頁面網址（YouTube、LinkedIn 等），讓 AI 確認這些帳號是同一個人
+sameAs = []

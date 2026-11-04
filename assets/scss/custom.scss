@@ -9,20 +9,110 @@
     --article-font-size: 1.5rem;
 }
 
-/* 3. 縮小整體容器寬度，讓版面看起來更緊湊 */
+/* 3. 調整整體容器寬度與左右側邊欄比例，讓主內容區佔比更大 */
+/*    主內容區寬度 = 容器寬度 - 左側邊欄 - 右側邊欄 */
 @media (min-width: 1024px) {
     .container.extended {
         max-width: 1024px !important; /* 原本可能是 1280px */
+        --left-sidebar-max-width: 20%;  /* 主題預設 25% */
+        --right-sidebar-max-width: 25%; /* 主題預設 30% */
     }
 }
 
 @media (min-width: 1280px) {
     .container.extended {
-        max-width: 1100px !important; /* 原本可能是 1536px */
+        max-width: 1280px !important; /* 原本設 1100px，放寬讓主內容區更寬 */
+        --left-sidebar-max-width: 16%;  /* 主題預設 20% */
+        --right-sidebar-max-width: 22%; /* 主題預設 30% */
+    }
+}
+
+@media (min-width: 1536px) {
+    .container.extended {
+        max-width: 1400px !important;
+        --left-sidebar-max-width: 14%;  /* 主題預設 15% */
+        --right-sidebar-max-width: 20%; /* 主題預設 25% */
     }
 }
 
 /* 4. 縮小卡片間的間距 (原本是 40px) */
 :root {
     --section-separation: 30px;
+}
+
+
+/* 5. 左右側邊欄自動隱藏（桌機 ≥1024px，僅限文章內頁）
+ *    只對 Stack 主題加上 body.article-page 的文章內頁生效，首頁 / 列表頁維持三欄。
+ *    平常收成螢幕邊緣的一條細邊，滑鼠移過去（或用鍵盤 Tab 聚焦）才滑出來；
+ *    側邊欄改為浮動覆蓋，不再佔用版面，主內容區會撐滿整個容器寬度。
+ *    平板 / 手機維持 Stack 主題原本的行為（左側漢堡選單、右側隱藏）。
+ *    若要停用，刪除這整段即可（第 3 段的側邊欄比例會自動恢復作用）。 */
+@media (min-width: 1024px) {
+    :root {
+        --sidebar-peek: 14px;          /* 收合時露出的細邊寬度 */
+        --sidebar-drawer-left: 260px;  /* 左側展開寬度 */
+        --sidebar-drawer-right: 320px; /* 右側展開寬度 */
+    }
+
+    body.article-page .container.extended .left-sidebar,
+    body.article-page .container.extended .right-sidebar {
+        position: fixed !important;
+        top: 0 !important;
+        bottom: 0;
+        height: 100vh !important;
+        max-height: 100vh !important;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        z-index: 100;
+        padding: var(--main-top-padding, 35px) 24px !important;
+        background: var(--body-background);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* 收合時隱藏內容，只留細邊 */
+    body.article-page .container.extended .left-sidebar > *,
+    body.article-page .container.extended .right-sidebar > * {
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+
+    /* 左側 */
+    body.article-page .container.extended .left-sidebar {
+        left: 0;
+        width: var(--sidebar-drawer-left) !important;
+        max-width: var(--sidebar-drawer-left) !important;
+        transform: translateX(calc(-100% + var(--sidebar-peek)));
+        border-right: 3px solid var(--accent-color);
+    }
+
+    /* 右側 */
+    body.article-page .container.extended .right-sidebar {
+        right: 0;
+        width: var(--sidebar-drawer-right) !important;
+        max-width: var(--sidebar-drawer-right) !important;
+        transform: translateX(calc(100% - var(--sidebar-peek)));
+        border-left: 3px solid var(--accent-color);
+    }
+
+    /* 展開：滑鼠移過去或內部元素取得焦點（例如在搜尋框打字時不會縮回去） */
+    body.article-page .container.extended .left-sidebar:hover,
+    body.article-page .container.extended .left-sidebar:focus-within,
+    body.article-page .container.extended .right-sidebar:hover,
+    body.article-page .container.extended .right-sidebar:focus-within {
+        transform: translateX(0);
+        box-shadow: 0 0 24px rgba(0, 0, 0, 0.35);
+    }
+
+    body.article-page .container.extended .left-sidebar:hover > *,
+    body.article-page .container.extended .left-sidebar:focus-within > *,
+    body.article-page .container.extended .right-sidebar:hover > *,
+    body.article-page .container.extended .right-sidebar:focus-within > * {
+        opacity: 1;
+    }
+
+    /* 主內容區左右各留一點空間，避免被細邊蓋到 */
+    body.article-page .container.extended .main {
+        padding-left: calc(var(--sidebar-peek) + 10px);
+        padding-right: calc(var(--sidebar-peek) + 10px);
+    }
 }
