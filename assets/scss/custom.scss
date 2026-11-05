@@ -1,12 +1,19 @@
 /* 自定義縮放樣式 */
 
+/* 1. 手機與平板（<1024px）維持正常好讀的字體大小
+ *    原本無條件設成 50% + 1.5rem，導致手機文章內文只有 16px × 50% × 1.5 = 12px，太小難讀。
+ *    這裡恢復主題預設的 62.5%（1rem = 10px），手機文章內文約 17px。 */
 :root {
-    /* 1. 縮小全局文字與間距 (原本是 62.5%) */
-    /* 降到 50% 會讓原本 1.6rem 的字從 16px 變成 12.8px */
-    font-size: 50% !important; 
+    font-size: 62.5% !important;
+    --article-font-size: 1.7rem;
+}
 
-    /* 2. 調整文章內部的字體大小 (原本是 1.6rem ~ 1.7rem) */
-    --article-font-size: 1.5rem;
+/* 2. 桌機版（≥1024px）才縮小全局文字與間距，維持原本緊湊的視覺效果 */
+@media (min-width: 1024px) {
+    :root {
+        font-size: 50% !important;
+        --article-font-size: 1.5rem;
+    }
 }
 
 /* 3. 調整整體容器寬度與左右側邊欄比例，讓主內容區佔比更大 */
