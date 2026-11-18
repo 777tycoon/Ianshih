@@ -103,4 +103,4 @@ Andrej Karpathy（前 Tesla AI 總監、OpenAI 創辦成員）提出了一種面
 如果你也深受資訊割裂、筆記整理雜工過大所苦，不妨也嘗試在你的數位花園中引入這位「AI 維基百科管理員」吧！
 
 ---
-*本文同步發表於個人部落格 [Digital Vineyard](https://example.com)。若你對 AI 輔助個人知識庫建構有興趣，歡迎在下方留言交流！*
+*本文同步發表於個人部落格 [Digital Vineyard](https://digivineyard.com/)。若你對 AI 輔助個人知識庫建構有興趣，歡迎在下方留言交流！*
