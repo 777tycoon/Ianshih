@@ -2,3 +2,10 @@ public
 resources
 .hugo_build.lock
 DEPLOYMENT_GUIDE.md
+
+# SSH & private key safeguards
+*ed25519*
+*id_rsa*
+*id_ecdsa*
+*.pem
+*.key
