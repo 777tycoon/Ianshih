@@ -12,7 +12,7 @@
 @media (min-width: 1024px) {
     :root {
         font-size: 50% !important;
-        --article-font-size: 1.5rem;
+        --article-font-size: 18px;
     }
 }
 
@@ -121,5 +121,46 @@
     body.article-page .container.extended .main {
         padding-left: calc(var(--sidebar-peek) + 10px);
         padding-right: calc(var(--sidebar-peek) + 10px);
+    }
+}
+
+/* 桌面長文閱讀寬度：文章資訊與正文對齊 760px，另保留主題左右內距。 */
+@media (min-width: 1024px) {
+    body.article-page .main-article .article-header > .article-details,
+    body.article-page .main-article .article-content {
+        width: 100%;
+        max-width: calc(760px + var(--card-padding) * 2);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* 桌面標題與摘要對齊正文，封面圖維持原有寬度。 */
+@media (min-width: 1024px) {
+    body.article-page .main-article .article-title-wrapper {
+        width: 100%;
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* 桌面文章頁尾對齊正文，保留主題原有上下間距與手機版面。 */
+@media (min-width: 1024px) {
+    body.article-page .main-article > .article-footer {
+        width: calc(100% - var(--card-padding) * 2);
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* 手機與平板寬表格僅在自身區塊水平捲動，不影響程式碼行號表格。 */
+@media (max-width: 1023px) {
+    body.article-page .main-article .article-content > table {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
     }
 }
